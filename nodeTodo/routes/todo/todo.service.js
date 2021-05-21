@@ -9,9 +9,23 @@ const todoGroup = models.todoGroup //todoGroup model
 exports.getAllTodos = (req, res) => {
     todolist.findAll({})
     .then( results => {
+        if (results == null) {
+            res.send({
+                message: 'emptyTodos'
+            })
+        }
+
+        var resultArray = new Array();
         for(var todo of results) {
             console.log('title:', todo.title);
+            const result = {
+                title: todo.title,
+                content: todo.content,
+                isDone: todo.isDone
+            }
+            resultArray.push(result)
         }
+        res.send(resultArray)
     })
     .catch(error => {
         console.log('Error :', error);
@@ -36,6 +50,7 @@ exports.createTodo =  async (req, res) => {
             isDone: isDone
         }, {logging: false});
         const newData = ret.dataValue;
+        res.sendStatus(200)
         console.log(newData);
         console.log('Create success')
     }
