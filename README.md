@@ -53,7 +53,7 @@ TodoLists
 
 TodoGroups
 {
-    id                     int
+    id                     int,
     name               string
 }
 
