@@ -41,15 +41,20 @@ TABLES
 
 
 TodoLists
- id                    int(PK)
- title                 string
- content           string
- isDone            bool
- createdAt       date
- updatedAt      date
- group_id         int(FK)
+ {
+     id                    int(PK),
+     title                 string,
+     content           string,
+     isDone            bool,
+     createdAt       date,
+     updatedAt      date,
+     group_id         int(FK)
+}
 
 TodoGroups
-id                     int
-name               string
+{
+    id                     int
+    name               string
+}
+
 
