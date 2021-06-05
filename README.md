@@ -36,20 +36,20 @@ API 설계
 DB 설계
 
 TABLES
-+-----------------------+
-| Tables_in_idu_node_db |
-+-----------------------+
-| todoGroups            |
-| todoLists             |
-+-----------------------+
+1. todoGroups
+2. todoLists
 
 
 TodoLists
-+----+-------+---------+--------+---------------------+---------------------+----------+
-| id | title | content | isDone | createdAt           | updatedAt           | group_id |
-+----+-------+---------+--------+---------------------+---------------------+----------+
+ id                    int(PK)
+ title                 string
+ content           string
+ isDone            bool
+ createdAt       date
+ updatedAt      date
+ group_id         int(FK)
 
 TodoGroups
-+----+---------+
-| id | name    |
-+----+---------+
+id                     int
+name               string
+
