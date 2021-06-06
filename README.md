@@ -14,8 +14,7 @@ API 설계
     /api/todo
     {
         "title": string,
-        "content": string,
-        "isDone": bool,
+        "content": string
         "group_id": int (optional)
     },
     
