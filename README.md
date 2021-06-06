@@ -34,6 +34,8 @@ API 설계
 
 DB 설계
 
+DB최초 생성 시 defatul 그룹 생성
+
 TABLES
 1. todoGroups
 2. todoLists
